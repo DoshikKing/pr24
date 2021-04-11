@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta xmlns:th="http://www.thymeleaf.org">
+    <title>Home</title>
+</head>
+<body>
+<div>
+    <form method="post" action="/home/addBank">
+        <label>
+            <input type="text" name="name" placeholder="bank name...">
+        </label>
+        <label>
+            <input type="text" name="address" placeholder="bank address...">
+        </label>
+        <button type="submit">add new bank</button>
+    </form>
+    <form method="post" action="/home/addCard">
+        <label>
+            <input type="number" name="cardNumber" placeholder="card number...">
+        </label>
+        <label>
+            <input type="number" name="code" placeholder="card code...">
+        </label>
+        <label>
+            <input type="text" name="name" placeholder="Bank name...">
+        </label>
+        <button type="submit">add new card</button>
+    </form>
+    <form method="get" action="/home/show">
+        <input type="submit" value="Show">
+    </form>
+    <form method="get" action="/home/getCardBank">
+        <label>
+            <input type="number" name="id" placeholder="id...">
+        </label>
+        <input type="submit" value="get bank of the card">
+    </form>
+    <form method="get" action="/home/getBankByName">
+        <input type="submit" value="Sort banks by name">
+    </form>
+    <form method="get" action="/home/getBankById">
+        <input type="submit" value="sort banks by id">
+    </form>
+    <form method="get" action="/home/getBankByAddress">
+        <input type="submit" value="sort banks by address">
+    </form>
+    <form method="get" action="/home/getCardById">
+        <input type="submit" value="sort cards by id">
+    </form>
+    <form method="get" action="/home/getCardByCode">
+        <input type="submit" value="sort cards by code">
+    </form>
+    <form method="get" action="/home/getCardByCardNumber">
+        <input type="submit" value="sort cards by card number">
+    </form>
+    <p th:text = "${buff}"></p>
+</div>
+
+</body>
+</html>
